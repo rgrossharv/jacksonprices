@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Weekly grocery and fuel price comparisons across local stores.">
+    <title>Jackson Prices</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="utility-bar">
+        <span id="last-updated">Updated Friday</span>
+        <span id="price-count">21 tracked prices</span>
+        <span id="store-count">2 stores</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="Jackson Prices home">
+          <span>Jackson Prices</span>
+        </a>
+        <div class="nav-actions">
+          <a href="#fuel">Fuel</a>
+          <a href="#prices">Prices</a>
+        </div>
+      </nav>
+      <section class="masthead" id="top">
+        <div class="masthead-copy">
+          <p class="eyebrow">Friday price sheet</p>
+          <h1>Local grocery and fuel price comparison</h1>
+          <p class="lede">
+            A weekly snapshot of common grocery and fuel prices in Jackson, built to collect community-sourced data on rural inflation and share practical local price information with Breathitt County.
+          </p>
+          <div class="header-ads" id="ads" aria-label="Weekly ad links">
+            <p class="section-kicker">Weekly Ads</p>
+            <a href="https://coxfoodsiga.com/ads/" target="_blank" rel="noopener">IGA weekly ad</a>
+            <a href="https://savealot.com/stores/24740/flyers" target="_blank" rel="noopener">Save-A-Lot weekly ad</a>
+          </div>
+        </div>
+        <div class="header-contact" id="contact" aria-label="Contribute price data">
+          <p class="section-kicker">Contribute</p>
+          <h2>Send local price updates</h2>
+          <p>People can help keep this page accurate by emailing price data and a receipt from their grocery purchase.</p>
+          <p><strong>Sample email:</strong> receiptsatjacksonprices@gmail.com</p>
+          <p>Please include the store name, purchase date, item name, package size, shelf price, and a clear photo or scan of the receipt.</p>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="fuel-band" id="fuel" aria-label="Fuel prices">
+        <div>
+          <p class="section-kicker">Fuel</p>
+          <h2>Gas and Diesel</h2>
+          <p class="section-note">Fuel prices change quickly and will be updated more often than the grocery sheet.</p>
+        </div>
+        <div class="fuel-grid" id="fuel-grid"></div>
+      </section>
+
+      <section class="controls" aria-label="Price controls" id="prices">
+        <div>
+          <p class="section-kicker">Comparison</p>
+          <h2>Weekly Price Board</h2>
+        </div>
+        <div class="control-row">
+          <label class="select-field">
+            <span>Category</span>
+            <select id="category-filter"></select>
+          </label>
+        </div>
+      </section>
+
+      <section class="table-wrap" aria-label="Grocery price table">
+        <table>
+          <thead>
+            <tr id="table-head"></tr>
+          </thead>
+          <tbody id="price-table"></tbody>
+        </table>
+      </section>
+
+      <section class="disclaimer-band" aria-label="Price disclaimer">
+        <div>
+          <p class="section-kicker">Disclaimer</p>
+          <h2>Prices can change and may vary by visit.</h2>
+        </div>
+        <div class="disclaimer-panel">
+          <p>Contributors do their best to provide accurate information about the items they actually buy, often using receipts or recent shelf prices. This site shares those community-submitted prices as a helpful local reference and shows the lowest available price we can find for each item.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Jackson Prices</span>
+      <span id="footer-updated">Updated weekly</span>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
