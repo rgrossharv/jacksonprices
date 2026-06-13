@@ -541,6 +541,93 @@ footer {
   .select-field {
     width: 100%;
   }
+
+  .table-wrap {
+    overflow-x: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+  }
+
+  table {
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  tbody {
+    display: grid;
+    gap: 10px;
+  }
+
+  tbody tr {
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+
+  tbody th,
+  tbody td,
+  tbody tr:nth-child(even) td,
+  tbody tr:nth-child(even) th,
+  tbody tr:hover td,
+  tbody tr:hover th {
+    background: #fff;
+  }
+
+  tbody th {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 11px 12px;
+  }
+
+  tbody td {
+    display: grid;
+    grid-template-columns: minmax(84px, 0.45fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    min-height: 42px;
+    border-right: 0;
+    padding: 8px 12px;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    color: #526168;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .price-cell {
+    font-size: 1.12rem;
+  }
+
+  .price-low,
+  tbody tr:nth-child(even) .price-low,
+  tbody tr:hover .price-low {
+    background: var(--green-soft);
+  }
+
+  .badge {
+    width: fit-content;
+  }
 }
 
 @media (max-width: 520px) {

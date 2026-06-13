@@ -73,10 +73,10 @@
           const value = item.prices[store.id];
           const lowClass = lows.includes(store.id) ? " price-low" : "";
           const missingClass = Number.isFinite(value) ? "" : " price-missing";
-          return `<td class="price-cell${lowClass}${missingClass}">${formatPrice(value)}</td>`;
+          return `<td class="price-cell${lowClass}${missingClass}" data-label="${store.name}">${formatPrice(value)}</td>`;
         }).join("")}
-        <td><span class="badge">${bestNames}</span></td>
-        <td>${trendLabel(item.trend)}</td>
+        <td data-label="Best"><span class="badge">${bestNames}</span></td>
+        <td data-label="Weekly">${trendLabel(item.trend)}</td>
       </tr>
     `;
   }
